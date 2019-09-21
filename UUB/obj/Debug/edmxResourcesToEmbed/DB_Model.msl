@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UUBdbModelStoreContainer" CdmEntityContainer="UUBdbContext">
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="UUBdbModel.orders">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="frist_name" ColumnName="frist_name" />
+          <ScalarProperty Name="second_name" ColumnName="second_name" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="cost_value" ColumnName="cost_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

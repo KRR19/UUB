@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UUBdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'UUBdb.dbo.orders' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="frist_name" Type="nchar" MaxLength="25" />
+    <Property Name="second_name" Type="nchar" MaxLength="25" />
+    <Property Name="adress" Type="int" />
+    <Property Name="weight" Type="int" />
+    <Property Name="comment" Type="nchar" MaxLength="300" />
+    <Property Name="type" Type="int" />
+    <Property Name="cost_value" Type="float" />
+  </EntityType>
+  <EntityContainer Name="UUBdbModelStoreContainer">
+    <EntitySet Name="orders" EntityType="Self.orders" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [orders].[order_id] AS [order_id], 
+    [orders].[frist_name] AS [frist_name], 
+    [orders].[second_name] AS [second_name], 
+    [orders].[adress] AS [adress], 
+    [orders].[weight] AS [weight], 
+    [orders].[comment] AS [comment], 
+    [orders].[type] AS [type], 
+    [orders].[cost_value] AS [cost_value]
+    FROM [dbo].[orders] AS [orders]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
